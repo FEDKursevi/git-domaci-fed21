@@ -1,0 +1,58 @@
+@import 'vars';
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamily;
+  @include boxSizing;
+}
+
+header {
+  width: 100%;
+  height: 4em;
+  .logo {
+    width: 20%;
+    background-color: $narandzasta;
+    color: #fff;
+    padding: .5em 2em;
+    float: left;
+    height: 100%;
+    img {
+      float: left;
+      width: 3em;
+      margin-bottom: .5em;
+    }
+    a {
+      color: #fff;
+      float: right;
+      width: 70%;
+      font-size: 1.6em;
+      margin-top: .3em;
+    }
+  }
+  nav {
+    background: $naslovi;
+    height: 100%;
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        float: left;
+        padding-top: 1.3em;
+        margin-right : 5em;
+        &:first-child{
+          margin-left: 2em;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
