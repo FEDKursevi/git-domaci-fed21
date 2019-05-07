@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'mixin';
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+    @include boxSizing;
+}
+
+main {
+    width: 100%;
+}
+
+.logo {
+    height: 1.5em;
+    width: 20%;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: $center;
+    background: $dark_blue;
+
+        li {
+            display: inline-block;
+            height: 3em;
+
+            a {
+                float: left;
+                padding: 14px 30px;
+                text-decoration: none;
+                color: $bijela;
+                
+                &:hover {
+                    text-decoration: underline;
+                }   
+
+            } 
+
+        }
+
+        .active {
+            background-color: $orange;
+        }        
+}
+
+.header_image {
+    width: 100%;
+    position: relative;
+
+        .naslovi {
+            position: absolute;
+            top: 75%;
+            left: 25%;
+            background: rgba($color: $naslovi, $alpha: 0.5);
+            padding: 16px 130px;
+
+            h1 {
+                text-align: center;
+                color: $bijela;
+               
+            }
+    
+            h4 {
+                @extend h1;
+            }    
+
+        }
+   
+}
+
+
+
+.row {
+    width: 90%;
+    @include clearfix;
+
+        .dugmici {
+            width: 15%;
+            float: right;
+            padding: 10px;
+            background: $bijela;
+            border: 1px solid $light_grey;
+            border-radius: 15px;
+            margin: 20px;
+            text-align: center;
+
+                &:hover {
+                    background: $light_grey;
+                    color: $bijela;
+                }
+        }
+
+}
+
+.slike {
+    width: 100%;
+    background-color: $grey_section;
+    padding: 20px 0;
+
+        .slika {
+            width: 24%;
+            display: inline-block;
+            padding: 20px;
+        }
+}
+
+.tabela {
+    h2 {
+        color: $naslovi;
+        text-align: center;
+        margin: 10px;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin-top: 20px;
+        color: $naslovi;
+        text-align: center;
+    }
+
+    .prikaziMe {
+        visibility: hidden;
+    }
+
+    table {
+        width: 45%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        border: 1px solid $naslovi;
+
+            tr, td {
+                color: $naslovi;
+                text-align: center;
+                padding: 5px;
+
+            }
+    }
+}
+
+.forma {
+    width: 100%;
+    background: $grey_section;
+    @include clearfix;
+    h2 {
+        color: $naslovi;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+
+    .mapa {
+        float: left;
+        margin: 20px 0 20px 120px;
+    }
+
+    form {
+        float: left;
+		width: 50%;
+		background: $orange;
+	    display: block;
+	    margin: 20px 0 0 50px;
+        padding: 20px;
+        
+        .contactInput {
+            float: left;
+            width: 73.2%;
+            border: none;
+            color: $naslovi;
+            height: 50px;
+            margin: 5px;
+            padding-left: 20px;
+
+        }
+
+        .contactSelect {
+            float: left;
+            width: 23.42%;
+            border: none;
+            color: $naslovi;
+            height: 50px;
+            margin: 5px;
+            padding-left: 20px;
+        }
+
+        .contact100 {
+            float: left;
+	    	width: 100%;
+	    	border: none;
+		    color: $naslovi;
+		    padding: 20px;
+		    margin: 10px 0;
+            resize: none;
+        }    
+       
+    }
+}
+
+footer {
+    width: 100%;
+    background: $dark_blue;
+    text-align: center;
+    color: $bijela;
+    line-height: 2em;
+}
+
+@media only screen and (max-width: 500px) {
+    ul {
+        li {
+            width: 100%;
+                a {
+                    float: none;
+                    display: block;
+                    text-align: center;
+                }
+        }
+    }
+
+    .header_image {
+        .naslovi {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            background: black;
+        }
+    }
+
+    .row {
+        width: 100%;
+
+        .dugmici {
+            width: 31%;
+            float: none;
+            display: inline-block;
+            margin: 10px 2px;
+        }
+    }
+
+    .slike {
+        .slika {
+            width: 100%;
+            float: none;
+            display: block;
+            padding: 0px;
+            margin: 10px;
+        }
+    }
+
+    .tabela {
+
+        height: 150px;
+
+        .prikaziMe {
+            display: block;
+            visibility: visible;
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 40%;
+            padding: 5px 20px;
+            margin: 10px auto;
+            background: white;
+        }
+
+       table {
+           visibility: hidden;
+       }
+    }
+
+    .forma {
+
+        form {
+            width: 100%;
+            display: block;
+            margin: 20px auto;
+
+            .contactSelect {
+                width: 100%;
+                float: none;
+                margin: 5px 0;
+            }
+
+            .contactInput {
+                width: 100%;
+                float: none;
+                margin: 5px 0;
+            }
+
+            .contact100 {
+                margin: 5px 0;
+            }
+
+        } 
+
+        .mapa {
+            float: none;
+            display: block;
+            margin: 10px;
+            width:-webkit-fill-available;
+        }
+    }
+
+    
+
+}
+
+@media only screen and (max-width: 768px) {
+    .header_image {
+        .naslovi {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .slike {
+        .slika {
+            width: 49%;
+            padding: 10px;
+            display: inline-block;
+        }
+    }
+
+    .forma {
+        .mapa {
+            display: block;
+            margin: 10px auto;
+            float: none;
+        }
+
+        form {
+            display: block;
+            margin: 10px auto;
+            float: none;
+            height: 330px;
+        }
+    }
+
+}
+      
+
+
+
+
+
