@@ -99,3 +99,26 @@ nav {
 
 //////////////////////////////////////////////////////////////////////////
 
+//              Main section            //
+
+// Tags
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tags {
+    margin: 40px 0px 80px 0px;
+    text-align: right;
+    
+    span {
+        border: 1px solid lightgray;  
+        border-radius: 15px;
+        padding: 5px;
+        margin-left: 50px;
+    }
+}
+
+//Images
+
