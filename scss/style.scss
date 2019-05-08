@@ -1,5 +1,7 @@
+@import 'vars';
+@import 'mixins';
 
-
+//google maps insert
 .mapouter { 
     position: relative;
     text-align: right;
@@ -24,3 +26,76 @@ td {
 .invisible {
     border: none;
 }
+
+////////////////////////////////////////////
+
+
+//               Global styles          //
+
+* {
+    font-family: $main-font;
+}
+
+body {
+    margin: 0px;
+}
+
+
+//                  Header                //
+
+nav {
+    background-color: $header-footer-color;
+    text-align: left;
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+        padding-inline-start: 0px;
+    }
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            color: white;
+            text-transform: uppercase;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+        li:first-child {
+            width: 200px;
+            background-color: $main-color;
+            padding: 10px 100px 15px 0px;
+        }
+
+        a img {
+            height: 30px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
+}
+
+.main-banner {
+    background-image: url("../slike/intro.jpg");
+    background-size: cover;
+    height: 800px;
+    text-align: center;
+    position: relative;
+
+    .main-title {
+        position: absolute;
+        width: 80%;
+        bottom: 100px;
+        background-color: rgba($color: black, $alpha: .3);
+        color: white;
+        right: 10%;  
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+
